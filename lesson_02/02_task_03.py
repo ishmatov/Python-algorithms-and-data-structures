@@ -7,7 +7,7 @@ def turn_over(n):
     if n < 10:
         return n
     if n >= 10:
-        return f'{n % 10}{turn_over(n//10)}'
+        return f'{n % 10}{turn_over(n // 10)}'
 
 
 num = int(input("Введите натуральное число: "))
@@ -19,7 +19,6 @@ while tmp != 0:
     tmp //= 10
 
 print(s)
-
 
 f = turn_over(num)
 print(f)
