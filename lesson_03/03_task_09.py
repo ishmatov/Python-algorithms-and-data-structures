@@ -2,20 +2,21 @@
 
 import random
 
-SIZE_M = 5
-SIZE_N = 5
+SIZE_L = 5
+SIZE_C = 4
 MIN_ITEM = 0
 MAX_ITEM = 100
-matrix = [[random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE_N)] for _ in range(SIZE_M)]
+matrix = [[random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE_C)] for _ in range(SIZE_L)]
 print(*matrix, sep='\n')
 max_ = None
 
-for line in matrix:
-    min_line = line[0]
-    for i, item in enumerate(line):
-        if item < min_line:
-            min_line = item
-    if max_ is None or min_line > max_:
-        max_ = min_line
+for i in range(0, SIZE_C):
+    min_col = matrix[0][i]
+    for j in range(0, SIZE_L):
+        if matrix[j][i] < min_col:
+            min_col = matrix[j][i]
+    print(min_col)
+    if max_ is None or min_col > max_:
+        max_ = min_col
 
 print(max_)
