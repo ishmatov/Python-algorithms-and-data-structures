@@ -26,6 +26,7 @@ root.left.left = Node(12)
 # root.left = MyNode(21)
 # root.right =MyNode(69)
 
+
 print(root)
 
 r = build([1, 2, 3, 4, 5, 6, 7])
